@@ -28,7 +28,7 @@
          If you are looking for something specific, please call 
          ahead of your visit and we will be happy to help you source 
          unusual plants on our regular plant field trips around 
-         the pacific north west.
+         the pacific north west.</p>
 
           <div class="typical-plants">
             <h2> Typical plants around the shop </h2>
@@ -39,6 +39,7 @@
           </div>
 
           <div class="price-list">
+           
             <ul class="left-plant-list">
               <li> Succulents </li>
               <li> Cacti </li>
@@ -46,6 +47,7 @@
               <li> Philodendron </li>
               <li> Air Plants </li>
             </ul>
+
             <ul class="right-plant-list">
               <li> Small Trees </li>
               <li> Blooming Plants </li>
@@ -53,13 +55,10 @@
               <li> Air Plants </li>
               <li> Botanical Decor </li>
               <li> Outdoor Potted Landscape Design </li>
-            </ul
-
-
-            
-            </p>
+            </ul>
           </div>
 
+    
          </div>
 
         </div>
@@ -71,7 +70,6 @@
 <script>
   import VLink from '../components/VLink.vue'
   import Vue from 'vue'
-  import routes from '../routes'
 
   export default {
     components: {
