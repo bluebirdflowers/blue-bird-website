@@ -56,6 +56,7 @@
 }
 .splash-section {
   height: 85vh;
+  margin-top: 15vh;
   background-image: url("./../assets/bluebird_storefront_wide.jpg");
   background-repeat: no-repeat;
   background-size: cover;

@@ -8,9 +8,24 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+
   module: {
     rules: [
       {
+        test: /\.scss?$/, 
+        use: [
+          'style-loader', 
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.css$/, 
+        use: [
+          'style-loader', 
+           'css-loader', 
+        ]
+       },
+       {
         test: /\.vue$/,
         use: {
           loader: 'vue-loader'

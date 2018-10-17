@@ -1,5 +1,5 @@
 <template>
-  <div class="top-bar">
+  <nav class="top-bar fixed-top">
     <div class="top-bar-logo">
       <span>
         <p class="logo-bluebird"> BLUEBIRD</p>
@@ -29,7 +29,7 @@
           </span>
       </div>
     </div>
-  </div>
+  </nav>
   
 </template>
 
@@ -50,8 +50,11 @@
 </script>
 
 <style scoped>
-.top-bar-logo {
-  line-height: 0px;
+.top-bar-logo { 
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .logo-bluebird {
   text-align: center;
@@ -77,22 +80,22 @@
     font-family: Bebas;
     font-weight: 200;
 }
+.top-bar {
+  width: auto;
+  display: flex;
+  height: 15vh;
+  justify-content: space-between;
+  background-color: #205473;
+  padding:16px;
+  margin: 0;
+}
+.top-bar-logo {
+  color: white;
 
-  .top-bar {
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    background-color: #205473;
-    padding:16px;
-    margin: 0;
-  }
-  .top-bar-logo {
-    color: white;
-  
-  }
-  .top-links {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+}
+.top-links {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 </style>

@@ -1,7 +1,6 @@
 <template>
   <div class="main-container">
     <top-bar></top-bar>
-
      <splash-area> </splash-area>   
      <flower-csa> </flower-csa>   
      <events> </events>   

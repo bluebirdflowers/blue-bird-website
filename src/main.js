@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import BootstrapVue from "bootstrap-vue"
+
 import routes from './routes'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
@@ -6,9 +8,10 @@ import { faListAlt} from '@fortawesome/free-solid-svg-icons'
 import { faStore} from '@fortawesome/free-solid-svg-icons'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import VueCarousel from 'vue-carousel';
 
-Vue.use(VueCarousel);
+//Vue.use(VueCarousel);
+Vue.use(BootstrapVue)
+
 
 library.add(faPhone)
 library.add(faStore)

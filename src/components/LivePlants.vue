@@ -2,23 +2,37 @@
 
   <section class="container">
 
-    <div id="events" class="event-section">
-       
-      <div class="left-image-section">
-        <div class="image-slider">
-        </div>
-        <div class="image-buttons">
-          <font-awesome-icon icon="circle" />
-          <font-awesome-icon icon="circle" />
-          <font-awesome-icon icon="circle" />
-          <font-awesome-icon icon="circle" />
-          <font-awesome-icon icon="circle" />
-          </div>
+    <div id="events" class="row">
 
-      </div>
+      <div class="col-6">
+        <b-carousel id="csa-carousel"
+                style="text-shadow: 1px 1px 2px #333;"
+                controls
+                indicators
+                background="#ababab"
+                :interval="4000"
+                img-width="1024"
+                img-height="480"
+                v-model="slide"
+                @sliding-start="onSlideStart"
+                @sliding-end="onSlideEnd"
+         >
+        <b-carousel-slide 
+          img-src="./../src/assets/bluebird_live_plants_01.jpg"
+        ></b-carousel-slide>
+        <b-carousel-slide 
+          img-src="./../src/assets/bluebird_live_plants_02.jpg"
+        </b-carousel-slide>
+        <b-carousel-slide 
+          img-src="./../src/assets/bluebird_live_plants_03.jpg"
+        </b-carousel-slide>
+        <b-carousel-slide 
+          img-src="./../src/assets/bluebird_live_plants_04.jpg"
+        </b-carousel-slide>
+      </b-carousel>
+    </div>
 
-      <div class="right-copy">
-              <div class="wrap-details"> 
+      <div class="col-6">
 
         <h1> LIVE PLANTS  </h1>
         <p>We love indoor plants as much as we love as we love 
@@ -30,16 +44,12 @@
          unusual plants on our regular plant field trips around 
          the pacific north west.</p>
 
-          <div class="typical-plants">
             <h2> Typical plants around the shop </h2>
             <p> In order to ensure we are ready for your special day, we encourage 
             clients to let us know their request at least 10 days in advance. 
             This time will allow us ample time to ensure our stock is fresh 
             and ready for your special day.</p>
-          </div>
 
-          <div class="price-list">
-           
             <ul class="left-plant-list">
               <li> Succulents </li>
               <li> Cacti </li>
@@ -56,13 +66,7 @@
               <li> Botanical Decor </li>
               <li> Outdoor Potted Landscape Design </li>
             </ul>
-          </div>
-
-    
-         </div>
-
         </div>
-
       </div>
   </section>
 </template>
