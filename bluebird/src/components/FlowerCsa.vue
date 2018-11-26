@@ -1,77 +1,106 @@
 <template>
-  <b-container class="flower-csa-container">
-    <b-row id="flowers" class="row">
+  <b-container  id="flowers" class="flower-csa-container">
+      <img src="/blue_bird_long_11.jpg"
+                img-alt="Card image"
+                img-top>         
+      </img>
+
+
+    <b-row  align-v="center">
       <b-col lg="6" sm="12">
-        <b-container>
-          <b-row>
+          <b-row no-gutters>
             <h2 class="text-left"> Flower CSA </h2>
-            <p class="text-left">Our flower CSA’s are the perfect item to cheer up your home or business.  We work with you to decide frequency, types of flowers, and will even support you with our own small vases if that is what you require.  Below are estimates to help you get an idea of what is available but know we can customize any order to your needs.</p>
+            <p class="text-left">
+              Our flower CSA’s are the perfect item to cheer up your home or business.  
+              From frequency, types of flowers, and vases, packages are customizable to your needs.</p>
           </b-row>
-          <b-row>
-            <b-col cols="6">
+
+          <b-row no-gutters>
+            <b-col  cols="8">
             </b-col>            
-            <b-col cols="3">
+            <b-col cols="2">
               <p class="text-cente small-font"> no vase </p>
             </b-col>
-            <b-col cols="3">
+            <b-col cols="2">
               <p class="text-center small-font"> with vase </p>
             </b-col>            
           </b-row>
           
           <!-- small row --> 
-          <b-row>
-            <b-col cols="6">
+          <b-row no-gutters>
+            <b-col cols="8">
               <h4 class="text-left"> SMALL</h4>
-              <p class="text-left">  1-3 short stemmed floral pieces. </p>
+              <p class="text-left">  
+                1-3 short stemmed floral pieces.
+              </p>
             </b-col>
-            <b-col cols="3">     
+            <b-col cols="2">     
               <h4 class="text-center"> 10$  </h4>
             </b-col>
-            <b-col cols="3">     
-              <h4 class="text-center"> 10$ </h4>
+            <b-col cols="2">     
+              <h4 class="text-center"> 15$ </h4>
             </b-col>
           </b-row>
+        
       
           <!-- small row --> 
-          <b-row>
-            <b-col cols="6">
-              <h4 class="text-left"> SMALL</h4>
-              <p class="text-left">  1-3 short stemmed floral pieces. </p>
+          <b-row no-gutters>
+            <b-col cols="8">
+              <h4 class="text-left"> MEDIUM</h4>
+              <p class="text-left">  
+                5-7 medium stemmed floral pieces.
+              </p>
             </b-col>
-            <b-col cols="3">     
-              <h4 class="text-center"> 10$ </h4>
+            <b-col cols="2">     
+              <h4 class="text-center"> 18$ </h4>
             </b-col>
-            <b-col cols="3">     
-              <h4 class="text-center"> 10$  </h4>
+            <b-col cols="2">     
+              <h4 class="text-center"> 25$  </h4>
             </b-col>
           </b-row>
 
           <!-- small row --> 
-          <b-row>
-            <b-col cols="6">
-              <h4 class="text-left"> SMALL</h4>
-              <p class="text-left">  1-3 short stemmed floral pieces. </p>
+          <b-row no-gutters>
+            <b-col cols="8">
+              <h4 class="text-left"> LARGE</h4>
+              <p class="text-left">  
+                8-10 medium / large floral pieces. 
+              </p>
             </b-col>
-            <b-col cols="3">     
-              <h4 class="text-center"> 10$  </h4>
+            <b-col cols="2">     
+              <h4 class="text-center"> 25$  </h4>
             </b-col>
-            <b-col cols="3">     
-              <h4 class="text-center"> 10$  </h4>
+            <b-col cols="2">     
+              <h4 class="text-center"> 35$  </h4>
             </b-col>
           </b-row>
-      
-          <p class="text-left"> Prices will vary. Vase rental available with deposit. </p>
-            
-        </b-container>
+
+          <b-row>
+            <b-col class="text-left" cols="12">
+              <h4> FYI </h4>
+            </b-col>
+            <b-col cols="12">
+              <p class="text-left"> Prices will vary. Vase rental available with deposit. </p>
+            </b-col>
+          </b-row no-gutters>
+          <b-row class="button-row">
+            <b-col>
+            <router-link to="/request-form">
+              <a>
+                <p>Make a request </p>
+              </a>
+            </router-link>
+            </b-col>
+          </b-row>
       </b-col>
       <!-- begin carousel -->
-      <b-col lg="6" sm="12">
+      <b-col align-self="center" lg="6" sm="12">
         <b-carousel id="csa-carousel"
                 style="text-shadow: 1px 1px 2px #333;"
                 controls
                 indicators
                 background="#ababab"
-                :interval="4000"
+                :interval="0"
                 img-width="1024"
                 img-height="480"
                 v-model="slide"
@@ -132,39 +161,12 @@
 
 <style scoped>
 
-#flowers {
-  margin-top: 32px;
-}
-.container {
-  max-width: 100%;
-
+#flowers img {
+  width: 100%;
+  margin-top: 16px;
+  display: none;
 }
 
-.small-font {
-  font-size: 2vh;
-}
-
-h2 {
-  font-family: 'bebas-neue', serif;
-  color: #205473;
-  font-size: 11vh ;
-}
-
-h4 {
-  font-family: 'bebas-neue', serif;
-  color: #205473;
-  font-size: 2.5em !important;
-}
-p {
-  font-family: 'linotype-didot', serif;
-  font-size: 2.5vmax;
-  color: #205473;
-}
-.flower-csa-container {
-  width:100%;
-  max-width: 1366px;
-  min-height: 85vh;
-}
 
 .image-wrapper {
   width: 48%;
@@ -174,7 +176,8 @@ p {
 }
 
 #csa-carousel {
-  max-height: 100%;
+  height: calc(100vh - 132px);
+  max-height: 600px;
   overflow: hidden;
 }
 .image-buttons {
@@ -206,9 +209,15 @@ p {
 
 @media  only screen and (max-width: 990px) {
 
-#csa-carousel {
-  display: none;
+  #csa-carousel {
+    display: none;
+  }
+  #flowers img {
+  display: block;
 }
+}
+
+@media  only screen and (max-width: 668px) {
 
 }
 

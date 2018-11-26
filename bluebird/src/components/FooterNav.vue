@@ -1,0 +1,91 @@
+<template>
+  <b-container class="bluebird-footer">
+    <b-row class="bluebird-footer__row">
+        <b-col class="text-center text-md-left" cols="12" md="6">
+          <ul>
+            <li>
+              <a  href="https://www.facebook.com/pages/Blue-Bird-Flowers/256188174927013?__tn__=%2CdkC-R-R&eid=ARBbBDb5Ps5hNiAhtIcOCVD8WSgXX8DOqw5e6dBu0lpkzi4-bb32dHbQCwo4KMPuOSnaxldwz0e1B8mn&hc_ref=ARQyFiGstLOnoHIMvFA5nIP-u0EPfZIjvZ-HIj1isKzb1JdnePZpPDwhbgg_75mElyg&fref=tag"> 
+                <font-awesome-icon :icon="['fab', 'facebook']" /> 
+                <p>Facebook </p>
+              </a>
+            </li>
+            <li>
+              <a  href="https://www.instagram.com/flowersbluebird/">
+                <font-awesome-icon :icon="['fab', 'instagram']" /> 
+                <p> Instagram </p> 
+              </a>
+            </li>
+            <li>
+              <a  href="/"> 
+                <font-awesome-icon icon="envelope" /> 
+                <p> Email </p>
+              </a>
+            </li>
+            </ul>
+        </b-col>
+        <b-col class="text-center text-md-left" cols="12" md="6">
+          <ul>
+            <li>
+              <a  href="/"> 
+                <p>Privacy Policy </p>
+              </a>
+            </li>
+            <li>
+              <a  href="/">
+                <p> Terms of Use </p> 
+              </a>
+            </li>
+            <li>
+              <a  href="/"> 
+                <p> Copyright Bluebird Flowers 2018 </p>
+              </a>
+            </li>
+            </ul>
+        </b-col>
+    </b-row>  
+    </b-container>
+</template>
+
+
+<style>
+.bluebird-footer {
+    background-color: #205473;
+    height: auto;
+    font-family: 'bebas-neue', sans-serif;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+}
+.bluebird-footer__row {
+  max-width: 1366px;
+  margin: auto;
+  padding: 16px;
+}
+.bluebird-footer ul li {
+  display:block;
+  font-family: 'bebas-neue', sans-serif;
+  line-height: 32px;
+
+}
+
+.bluebird-footer ul li p {
+  display: inline;
+  margin-left: 8px;
+  font-size: 2vmin;
+  color: #9FBFD0 !important;
+
+  font-family: 'bebas-neue', sans-serif;
+}
+
+.bluebird-footer ul li a {
+  display: inline;
+  font-family: 'bebas-neue', sans-serif;
+  color: #9FBFD0 !important;
+}
+
+.bluebird-footer ul a:hover,
+ {
+  color: #E0A591;
+}
+</style>

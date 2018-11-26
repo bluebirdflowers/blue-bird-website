@@ -53,7 +53,7 @@ module.exports = {
     }
   },
   devServer: {
-    historyApiFallback: true,
+    historyApiFallback: false,
     noInfo: true
   },
   performance: {

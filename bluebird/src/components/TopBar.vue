@@ -1,21 +1,29 @@
 <template>
-<div>
-  <b-nav class="bluebird-nav">
-    <b-nav-item class="col" xs="12" md="3" >
-          <a href="tel:+15417805510"> <font-awesome-icon icon="phone" /> Call Us</a>
-    </b-nav-item>        
-
-    <b-nav-item v-on:click="mapsSelector" class="col" xs="12" md="3" > 
-        <font-awesome-icon icon="store" />
-         Find Us 
-      </b-nav-item>
-    <b-nav-item class="col" xs="12" md="3"  disabled> 
-      <a href="/request"> 
-            <font-awesome-icon icon="list-alt" /> Request  </a>
-    </b-nav-item>
-  </b-nav>
-</div>
-  
+  <b-container class="bluebird-nav-wrapper">
+    <b-row class="bluebird-nav" sticky="true">
+      <b-col class="text-left" cols="8" md="6">
+        <a class="title-link" href="/"> Bluebird Flowers</a>
+      </b-col>
+      <b-col cols="1" md="2">
+        <a href="tel:1-541-780-5510"> 
+          <font-awesome-icon icon="phone" /> 
+          <p> Call Us </p> 
+        </a>
+      </b-col>
+      <b-col cols="1" md="2" class="findUs" v-on:click="mapsSelector">
+          <font-awesome-icon icon="store" /> 
+          <p>Find Us </p>
+      </b-col>
+      <b-col cols="1" md="2">
+        <router-link to="/request-form">
+          <a>
+            <font-awesome-icon icon="list-alt" /> 
+            <p>Request</p>
+          </a>
+        </router-link>
+      </b-col>
+      </b-row>  
+      </b-container>
 </template>
 
 <script>
@@ -38,21 +46,61 @@
            window.open("https://maps.google.com/maps?daddr=44.051658,-123.092308&amp;ll=");
       }   
     }
+    /* mounted() {
+      this.$nextTick(function(){
+        window.addEventListener("scroll", function(){
+          var navbar = document.getElementById("nav")
+          var nav_classes = navbar.classList
+          if(document.documentElement.scrollTop >= 150) {
+            if (nav_classes.contains("shrink") === false) {
+              nav_classes.toggle("shrink");
+            }
+          }
+          else {
+            if (nav_classes.contains("shrink") === true) {
+              nav_classes.toggle("shrink");
+            }
+          }
+        })
+      })
+    },*/
   }
 </script>
 
 <style scoped>
 
+.bluebird-nav-wrapper {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  max-width: 100%;
+  margin: 0px;
+  padding: 0px;
+  z-index: 1200;
+
+  background-color: #205473;
+}
 .bluebird-nav {
   background-color: #205473;
   height: 100px;
+
+  max-width: 1366px;
+  margin: auto;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
-.bluebird-nav a {
+.bluebird-nav p {
+  display: inline;
+}
+.bluebird-nav a, .bluebird-nav p, .findUs {
   color: white;
   font-family: 'bebas-neue', sans-serif;
-  font-size: 2vmin;
+  font-size: 1.8vmax;
   line-height: 100px;
+}
+.title-link {
+  font-size: 3vmax !important;
 }
 .bluebird-nav a:hover {
   color: #E0A591;
@@ -66,10 +114,20 @@
     .title-header a {
     font-size: 4vmax;
   }
+   .bluebird-nav p {
+     font-size: 2vmax;
+   }
+    .bluebird-nav p {
+    display: none !important;
+  }
 
 
- .bluebird-nav a {
-  line-height: 80px;
+ .bluebird-nav a, .findUs{
+   line-height: 80px;
+ }
 }
+
+@media only screen and (max-width: 720px) {
+
 }
 </style>

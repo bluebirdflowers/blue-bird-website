@@ -13,16 +13,16 @@
 
       <b-row align-v="center">
         <b-col sm="12" lg="3">
-          <v-link href="/#flowers">Flowers</v-link>
+          <a href="/#flowers">Flowers</a>
         </b-col>
         <b-col sm="12" lg="3">
-          <v-link href="/#bouquets">Bouquets</v-link>
+          <a href="/#bouquets">Bouquets</a>
         </b-col>
         <b-col sm="12" lg="3">
-          <v-link href="/#events">Events</v-link>
+          <a href="/#events">Events</a>
         </b-col>
         <b-col sm="12" lg="3">
-          <v-link href="/#live-plants">Live Plants</v-link>
+          <a href="/#live-plants">Live Plants</a>
         </b-col>
       </b-row>
   </b-container>
@@ -64,9 +64,10 @@
 }
 
 .splash-section__container .outline {
-  margin: 96px 20px 20px 20px ;
+  margin: 20px ;
   border: 2px solid white;
   border-radius: 8px;
+  margin-top: 15vw;
 }
 
 

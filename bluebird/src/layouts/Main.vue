@@ -1,9 +1,11 @@
 <template>
-
+  <container>
   
     <top-bar></top-bar>
-    
-  
+
+    <footer></footer>
+
+  </container>
 </template>
 
 <script>
@@ -14,6 +16,7 @@
   import Events from '../components/Events.vue'
   import Bouquets from '../components/Bouquets.vue'
   import LivePlants from '../components/LivePlants.vue'
+  import FooterNav from '../components/FooterNav.vue'
 
 
   import "bootstrap/dist/css/bootstrap.min.css"
@@ -28,7 +31,9 @@
       FlowerCsa,
       Events,
       Bouquets,
-      LivePlants
+      LivePlants,
+      FooterNav
+      
     }
   }
 </script>
