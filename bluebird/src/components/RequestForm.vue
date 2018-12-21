@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <div class="request-container">
-      <h2> Get in touch! </h2>
+      <h2 :class="contactFormClass"> Get in touch! </h2>
 
-      <b-container>
-        <b-row v-align="center">
+      <b-container :class="contactFormClass">
+        <b-row>
           <b-form @submit="onSubmit" class="text-left" id="bluebirdRequestForm">
  
           <label for="firstName">First Name</label>
@@ -26,15 +26,16 @@
                           placeholder="My mom loves daisies.  Favorite color is pink.I can't stand the smell of roses."
                           :rows="3">
           </b-form-textarea>        
-           <b-button class="btn" type="submit" variant="primary">Submit</b-button>
+           <b-button class="btn" type="submit" id="submit" variant="primary">Submit</b-button>
         </b-form>
       </b-row>
+    </b-container>
+    <b-container v-bind:class="thanksMessageClass">
+      <h2> Thank you, we will be in touch! </h2>
     </b-container>
     </div>
   </div>
 </template>
-
-
 
 <script>
 
@@ -47,17 +48,6 @@ import LivePlants from './LivePlants.vue'
 import FooterNav from './FooterNav.vue'
 import RequestForm from './RequestForm.vue'
 
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBr-tzWbjg2zXbi7NdcMiJ_aah6Uk7OKyc",
-    authDomain: "bluebirdflowers-1bdb6.firebaseapp.com",
-    databaseURL: "https://bluebirdflowers-1bdb6.firebaseio.com",
-    projectId: "bluebirdflowers-1bdb6",
-    storageBucket: "bluebirdflowers-1bdb6.appspot.com",
-    messagingSenderId: "426054211952"
-  };
-  firebase.initializeApp(config);
-
 export default {
   data: function() {
     return {
@@ -67,7 +57,9 @@ export default {
         phoneNumber: '',
         emailAddress: '',
         specialMessage: ''
-      }
+      },
+      contactFormClass: 'show-contact-form',
+      thanksMessageClass: 'hide-thanks-message'
     }
   },
   components: {
@@ -80,14 +72,46 @@ export default {
     FooterNav,
     RequestForm   
   },
-  mounted: function() {
-    
+      mounted: function() {
+    login:  {
+      console.log("this", this);
+      firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
+        function(user) {
+          alert("Well done, bravo!", JSON.stringify(user))
+        },
+        function(err) {
+          alert('ooops', + err)
+        }
+      )
+    }
+
   },
   methods: {
     onSubmit (evt) {
       evt.preventDefault();
-      alert(JSON.stringify(this.form));
-    },
+      //Handling Contact Form
+
+      if(this.form.phoneNumber != "" && this.form.emailAddress != "" && this.form.firstName != "") {
+
+        const leadTimestamp = Math.floor(Date.now() / 1000);
+        this.contactFormClass = 'hide-contact-form';
+        this.thanksMessageClass = 'show-thanks-message';
+        firebase.database().ref('leads').once('value', snapshot => {
+          var totalLeads = snapshot.numChildren();
+          totalLeads++;
+          var database = firebase.database();
+          database.ref('leads').child(totalLeads).set({
+            first: this.form.firstName,
+            last: this.form.lastName,
+            phone: this.form.phoneNumber,
+            email: this.form.emailAddress,
+            message: this.form.specialMessage,
+            time: leadTimestamp
+          });
+        });
+      
+      }
+    }
   }
 }
 </script>
@@ -96,6 +120,22 @@ export default {
 
 
 <style>
+
+.show-contact-form {
+  display: block;
+}
+
+.hide-contact-form {
+  display: none;
+}
+
+.show-thanks-message {
+  display: block;
+}
+
+.hide-thanks-message {
+  display: none;
+}
 
 
 h1, h2, label {

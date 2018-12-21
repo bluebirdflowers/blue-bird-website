@@ -7,18 +7,19 @@
 </template>
 
 <script>
-
 import TopBar from './components/TopBar.vue'
 import FooterNav from './components/FooterNav.vue'
 import Home from './components/Home.vue'
 import RequestForm from './components/RequestForm.vue'
 
+
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
     }
+  
   },
   components: {
       TopBar,
