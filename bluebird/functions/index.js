@@ -2,39 +2,33 @@ const functions = require('firebase-functions');
 const nodemailer = require('nodemailer');
 
 
-
-const myPassword = functions.config().password;
-const myEmail = functions.config().email;
+const myPassword = functions.config().gmail.password;
+const myEmail = functions.config().gmail.email;
 
 const mailTransport = nodemailer.createTransport({
+  service: 'gmail',
   auth: {
     user: myEmail,
     pass: myPassword,
   }
 });
 
-
-exports.sendEmailWhenRequestSubmit = functions.database.ref('leads').onWrite((change) => {
-  const snapshot = change.after;
+exports.sendEmailWhenRequestSubmit = functions.database.ref('/leads/{id}').onCreate((snapshot, context) => {
   const val = snapshot.val();
-  if(!snapshot.cahnges('subscribedToMailingLIst')) {
-    return null;
-  }
   const mailOptions = {
-    from: '" Blue Bird Flowers" <bluebirdflowers@gmail.com>',
-    to: "bluebirdflowers@gmail.com",
+    from: '" Blue Bird Flowers" ',
+    to: "bluebirdflowerrs@gmail.com",
   };
-  const subscribed = false;
-  mailOptions.subject = "New request form.";
-  mailOptions.text =
-                    val.message + 
-                    val.number + 
-                    val.email + 
-                    val.firstName + 
-                    val.lastName;
+  mailOptions.subject = "Bluebird Flowers Contact Form";
+  mailOptions.html =
+                    "<b>message:</b> "       +   val.message   + "<br>" +
+                    "<b>phone number:</b> "  +   val.number    + "<br>" +
+                    "<b>email:</b> "         +   val.email     + "<br>" +
+                    "<b>first name:</b> "    +   val.firstName + "<br>" +
+                    "<b>last name:</b> "     +   val.lastName;
 
   return mailTransport.sendMail(mailOptions)
     .then(() => console.log('This is happening'))
-    .catch((error) => console.error('There was an error'));
+    .catch((error) => console.error('There was an error', error));
 });
 

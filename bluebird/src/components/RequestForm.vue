@@ -72,20 +72,19 @@ export default {
     FooterNav,
     RequestForm   
   },
-      mounted: function() {
-    login:  {
-      console.log("this", this);
-      firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
-        function(user) {
-          alert("Well done, bravo!", JSON.stringify(user))
-        },
-        function(err) {
-          alert('ooops', + err)
-        }
-      )
-    }
-
-  },
+/*      mounted: function() {
+      login:  {
+        console.log("this", this);
+        firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
+          function(user) {
+            alert("Well done, bravo!", JSON.stringify(user))
+          },
+          function(err) {
+            alert('ooops', + err)
+          }
+        )
+      }
+  },*/
   methods: {
     onSubmit (evt) {
       evt.preventDefault();

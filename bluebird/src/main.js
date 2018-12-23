@@ -34,13 +34,6 @@ const config = {
 
 const myFirebaseApp = firebase.initializeApp(config);
 console.log(myFirebaseApp);  // "[DEFAULT]"*/
-/*
-var admin = require("firebase-admin");
-var serviceAccount = require('path/to/serviceAccountKey.json');
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://bluebirdflowers-1bdb6.firebaseio.com/'
-});*/
 
 Vue.use(VueRouter)
 Vue.use(BootstrapVue)

@@ -1,7 +1,7 @@
 <template>
   <b-container class="bluebird-footer">
     <b-row class="bluebird-footer__row">
-        <b-col class="text-center text-md-left" cols="12" md="6">
+        <b-col class="text-center text-md-left" cols="12" md="4">
           <ul>
             <li>
               <a  href="https://www.facebook.com/pages/Blue-Bird-Flowers/256188174927013?__tn__=%2CdkC-R-R&eid=ARBbBDb5Ps5hNiAhtIcOCVD8WSgXX8DOqw5e6dBu0lpkzi4-bb32dHbQCwo4KMPuOSnaxldwz0e1B8mn&hc_ref=ARQyFiGstLOnoHIMvFA5nIP-u0EPfZIjvZ-HIj1isKzb1JdnePZpPDwhbgg_75mElyg&fref=tag"> 
@@ -16,14 +16,23 @@
               </a>
             </li>
             <li>
-              <a  href="/"> 
+              <a  href="mailto:bluebirdflowersllc@gmail.com"> 
                 <font-awesome-icon icon="envelope" /> 
                 <p> Email </p>
               </a>
             </li>
             </ul>
         </b-col>
-        <b-col class="text-center text-md-left" cols="12" md="6">
+        <b-col class="text-center" cols="12" md="4">
+          <b-row>
+            <p> Blue Bird Flowers llc 
+            <br>
+             1203 Willamette Street 
+            <br>
+             Eugene Oregon 97401 </p>
+          </b-row>
+        </b-col>
+        <b-col class="text-center text-md-left" cols="12" md="4">
           <ul>
             <li>
               <a  href="/"> 
@@ -36,9 +45,7 @@
               </a>
             </li>
             <li>
-              <a  href="/"> 
                 <p> Copyright Bluebird Flowers 2018 </p>
-              </a>
             </li>
             </ul>
         </b-col>
@@ -50,6 +57,7 @@
 <style>
 .bluebird-footer {
     background-color: #205473;
+    color: white;
     height: auto;
     font-family: 'bebas-neue', sans-serif;
     width: 100%;
@@ -58,18 +66,21 @@
     max-width: 100%;
 }
 .bluebird-footer__row {
-  max-width: 1366px;
+  max-width: 1200px;
   margin: auto;
   padding: 16px;
 }
-.bluebird-footer ul li {
+.bluebird-footer ul li,
+.bluebirf-footer p {
   display:block;
   font-family: 'bebas-neue', sans-serif;
   line-height: 32px;
+  color: white;
 
 }
 
-.bluebird-footer ul li p {
+.bluebird-footer ul li p,
+.bluebird-footer  p {
   display: inline;
   margin-left: 8px;
   font-size: 2vmin;
