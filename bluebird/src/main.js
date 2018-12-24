@@ -4,6 +4,7 @@ import BootstrapVue from "bootstrap-vue"
 import VueRouter from 'vue-router'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
+import routes from './routes.js'
 
 //import * as firebase from 'firebase'
 
@@ -16,11 +17,8 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { faStore} from '@fortawesome/free-solid-svg-icons'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
+import { faHandPointer } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-import Home from './components/Home.vue'
-import RequestForm from './components/RequestForm.vue'
-
 
 const config = {
   apiKey: "AIzaSyBr-tzWbjg2zXbi7NdcMiJ_aah6Uk7OKyc",
@@ -39,13 +37,6 @@ Vue.use(VueRouter)
 Vue.use(BootstrapVue)
 
 
-const routes = [
-  { path: '/', component:  Home },
-  { path: '/request-form', component: RequestForm },
-  { path: '/*', redirect: '/'}
-];
-
-
 const router = new VueRouter({
   routes,
   mode: 'history'
@@ -58,6 +49,7 @@ library.add(faCircle)
 library.add(faFacebook)
 library.add(faInstagram)
 library.add(faEnvelope)
+library.add(faHandPointer)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

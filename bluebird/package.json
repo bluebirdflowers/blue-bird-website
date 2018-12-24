@@ -27,7 +27,8 @@
     "nodemailer": "^4.7.0",
     "popper.js": "^1.12.9",
     "vue": "^2.5.3",
-    "vue-router": "^3.0.2"
+    "vue-router": "^3.0.2",
+    "vue-router-sitemap": "0.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

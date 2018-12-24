@@ -9,8 +9,6 @@
     </div>
   </div>
 </template>
-
-
 <script>
 
 import SplashArea from './SplashArea.vue'
@@ -46,24 +44,19 @@ export default {
 
 h1, h2 {
   font-weight: normal;
-    font-family: 'bebas-neue', 'sans-serif';
-
+   font-family: 'bebas-neue', 'sans-serif';
 }
-
 ul {
   list-style-type: none;
   padding: 0;
 }
-
 li {
   display: inline-block;
   margin: 0 10px;
 }
-
 a {
   color: #42b983;
 }
-
 #home {
   min-height: 100vh
 }
@@ -80,7 +73,7 @@ a {
 
 .container {
   width:100%;
-  max-width: 1366px;
+  max-width: 1200px;
   margin: auto;
 }
 

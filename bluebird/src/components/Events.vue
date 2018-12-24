@@ -36,35 +36,40 @@
 
     <b-col class="text-section" align-self="center" sm="12" lg="6">
       <b-row no-gutters>
-      <h2 class="text-left"> EVENTS </h2>
-      <p class="text-left">Special events. such as a wedding, graduation party, senior prom, 
-      promotion, Christmas Thanksgiving, Anniversary, Valentine’s Day, 
-      Mother’s Day, Birthday’s and just because.  We’ve got you covered!</p>       
+      <h2 class="text-left" style="display: block; width: 100%;"> 
+        EVENTS 
+      </h2>
+      <p class="text-left" style="display: block; width: 100%;">
+        Need flowers to celebrate a special event or holiday? 
+      </p>       
+      <h4 class="text-left" style="display: block;">
+        MINIMUM  NOTICE 
+      </h4>
+      <p class="text-left"> 
+        In order to ensure we are ready for your special day, 
+        we encourage clients to <router-link style="font-weight: bold;" to="/request-form"> get in touch </router-link> atleast ten days before the event. 
+        This will ensure our stock is fresh and ready with enough time to 
+        prepare for your celebration.
+      </p>
 
-      <h4 class="text-left" > MINIMUM  NOTICE </h4>
-      <p class="text-left"> In order to ensure we are ready for your special day, we encourage 
-      clients to let us know their request at least 10 days in advance. 
-      This time will allow us ample time to ensure our stock is fresh 
-      and ready for your special day.</p>
-
-      <h4 class="text-left"> PRICE  RANGE </h4>
+      <h4 class="text-left"> 
+        PRICE  RANGE 
+      </h4>
 
       <p class="text-left">
-      Price range for special events ranges depending on your needs, 
-      number of items requested, timing, and what you would like in 
-      the mix.  We work with all budgets and are ready to help you 
-      decorate your celebrations.
-      </p>
+      Price range varies depending on your special preferences, the time of year, and 
+      the mix of product utilized.  We work with all budgets and are ready to help you 
+      bring life your special moments and celebrations.
+      </p> 
       </b-row>
-            <b-row class="button-row">
-            <b-col>
-            <router-link to="/request-form">
-              <a>
-                <p>Make a request </p>
-              </a>
-            </router-link>
-            </b-col>
-          </b-row>
+        <b-row class="button-row">
+        <b-col>
+        <router-link to="/request-form">
+            Make a request 
+            <font-awesome-icon class="request-icon" icon="hand-pointer" /> 
+        </router-link>
+        </b-col>
+      </b-row>
 
   </b-col>
 

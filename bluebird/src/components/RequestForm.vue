@@ -8,25 +8,52 @@
           <b-form @submit="onSubmit" class="text-left" id="bluebirdRequestForm">
  
           <label for="firstName">First Name</label>
-          <b-input v-model="form.firstName" class="text-left mb-2 mr-sm-2 mb-sm-0" id="firstName" placeholder="Ryan" />
+          <b-input 
+            v-model="form.firstName" 
+            class="text-left mb-2 mr-sm-2 mb-sm-0" 
+            id="firstName" 
+            placeholder="Ryan" />
+           
+          <label for="lastName">
+            Last Name
+          </label>
+          <b-input 
+            v-model="form.lastName"  
+            class="mb-2 mr-sm-2 mb-sm-0" 
+            id="lastName" 
+            placeholder="Gosling" />
           
-          <label for="lastName">Last Name</label>
-          <b-input v-model="form.lastName"  class="mb-2 mr-sm-2 mb-sm-0" id="lastName" placeholder="Gosling" />
-          
-          <label for="phoneNumber"> Phone Number </label>
-          <b-input v-model="form.phoneNumber"  class="mb-2 mr-sm-2 mb-sm-0" id="phoneNumber" placeholder="555-867-5309" />
+          <label for="phoneNumber">
+            Phone Number 
+          </label>
+          <b-input 
+            v-model="form.phoneNumber"  
+            class="mb-2 mr-sm-2 mb-sm-0" 
+            id="phoneNumber" 
+            placeholder="555-867-5309" />
                   
-          <label for="emailAddress"> Email </label>
-          <b-input v-model="form.emailAddress" class="mb-2 mr-sm-2 mb-sm-0" id="emailAddress" placeholder="mark.zuckerburg@gmail.com" />
+          <label for="emailAddress">
+            Email
+          </label>
+          <b-input 
+            v-model="form.emailAddress"
+            class="mb-2 mr-sm-2 mb-sm-0" 
+            id="emailAddress" 
+            placeholder="mark.zuckerburg@gmail.com" />
           
-          <label for="specialMessage"> Comments or more info </label>
-          <b-form-textarea id="specialMessage"
-                          state=""
-                          v-model="form.specialMessage"
-                          placeholder="My mom loves daisies.  Favorite color is pink.I can't stand the smell of roses."
-                          :rows="3">
+          <label for="specialMessage">
+            Comments or more info 
+          </label>
+          <b-form-textarea 
+            id="specialMessage"
+            state=""
+            v-model="form.specialMessage"
+            placeholder="My mom loves daisies.  Favorite color is pink.I can't stand the smell of roses."
+            :rows="3">
           </b-form-textarea>        
-           <b-button class="btn" type="submit" id="submit" variant="primary">Submit</b-button>
+           <b-button class="btn" type="submit" id="submit" variant="primary">
+             Submit
+            </b-button>
         </b-form>
       </b-row>
     </b-container>
@@ -72,7 +99,7 @@ export default {
     FooterNav,
     RequestForm   
   },
-/*      mounted: function() {
+  /* mounted: function() {
       login:  {
         console.log("this", this);
         firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(

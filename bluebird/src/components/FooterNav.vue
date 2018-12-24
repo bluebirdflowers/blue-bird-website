@@ -12,7 +12,7 @@
             <li>
               <a  href="https://www.instagram.com/flowersbluebird/">
                 <font-awesome-icon :icon="['fab', 'instagram']" /> 
-                <p> Instagram </p> 
+                <p class="ml-8"> Instagram </p> 
               </a>
             </li>
             <li>
@@ -24,32 +24,36 @@
             </ul>
         </b-col>
         <b-col class="text-center" cols="12" md="4">
-          <b-row>
-            <p> Blue Bird Flowers llc 
+          <b-row class="bluebird-footer__row">
+            <address>
+            <p> Open daily 2-9pm 
             <br>
              1203 Willamette Street 
             <br>
              Eugene Oregon 97401 </p>
+            </address>
           </b-row>
         </b-col>
-        <b-col class="text-center text-md-left" cols="12" md="4">
+        <b-col class="text-center text-md-right" cols="12" md="4">
           <ul>
-            <li>
+            <li><router-link to="/privacy-policy">
               <a  href="/"> 
-                <p>Privacy Policy </p>
-              </a>
+                <p >Privacy Policy </p>
+              </a></router-link>
             </li>
             <li>
-              <a  href="/">
-                <p> Terms of Use </p> 
-              </a>
+              <router-link to="/terms-of-use">
+                <a  href="/">
+                  <p> Terms of Use </p> 
+                </a>
+              </router-link>
             </li>
             <li>
                 <p> Copyright Bluebird Flowers 2018 </p>
             </li>
             </ul>
         </b-col>
-    </b-row>  
+      </b-row>  
     </b-container>
 </template>
 
@@ -65,16 +69,29 @@
     padding: 0px;
     max-width: 100%;
 }
-.bluebird-footer__row {
-  max-width: 1200px;
+.bluebird-footer__row,
+address {
+  max-width: 1366px;
   margin: auto;
   padding: 16px;
 }
-.bluebird-footer ul li,
-.bluebirf-footer p {
+
+
+.bluebird-footer ul {
+  margin: auto;
+}
+.bluebird-footer ul li {
   display:block;
   font-family: 'bebas-neue', sans-serif;
   line-height: 32px;
+  margin: auto !important;
+  color: white;
+}
+
+.bluebird-footer p {
+  display:block;
+  font-family: 'bebas-neue', sans-serif;
+  margin: auto !important;
   color: white;
 
 }
@@ -83,9 +100,8 @@
 .bluebird-footer  p {
   display: inline;
   margin-left: 8px;
-  font-size: 2vmin;
+  font-size: 14px;
   color: #9FBFD0 !important;
-
   font-family: 'bebas-neue', sans-serif;
 }
 
@@ -98,5 +114,8 @@
 .bluebird-footer ul a:hover,
  {
   color: #E0A591;
+}
+.fab {
+  margin-right: 8px !important;
 }
 </style>

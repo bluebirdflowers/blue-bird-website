@@ -11,7 +11,11 @@
         <b-row no-gutters>
         <h2 class="text-left" >BOUQUETS</h2>
         <p> 
-          There is nothing wrong with ordering yourself or your loved one a one-off bouquet to show you care.  We work all budgets and all sizes of requests.  We are happy to find the perfect mix for you or your loved one.  Typically, we can fill requests same day, ordering will depend on what’s available, just stop by!  
+          Ordering yourself or your loved one a one-off bouquet?  We work with all budgets and requests,  
+          and are happy to find to find the perfect mix for you or your loved ones.  Currently requests, 
+          can only be made in advanced due to limited availability in the store. Please complete 
+          a <router-link style="font-weight: bold;" to="/request-form" >request form</router-link> to 
+          start the conversation.
         </p>
         <h4> PRICE RANGE</h4>
         <p> A mix of what is available, common, tropical, edible, 
@@ -23,19 +27,19 @@
         </b-row>
         <b-row no-gutters>
         <h4> TIME CONSTRAINTS</h4>
-        <p> We are happy to put together something day of, try to get 
-        a hold of us before noon to make sure we have enough time to 
-        fill your request.</p>
+        <p> We are happy to put together something day of, if we have avaialble stock. 
+          <a style="font-weight: bold;" href="tel:5417805510">Give us a call </a> or <router-link style="font-weight: bold;" 
+          to="/request-form"> complete a request form</router-link> before noon to make sure we have enough time
+          and product to fill your request.</p>
         <h4> DELIVERY </h4>
         <p> We offer free delivery to our downtown neighbors.  
         5$ delivery charge for within 10 miles of our shop.</p>
         </b-row>
-              <b-row class="button-row">
+          <b-row class="button-row">
             <b-col>
             <router-link to="/request-form">
-              <a>
-                <p>Make a request </p>
-              </a>
+                Make a request 
+                <font-awesome-icon class="request-icon" icon="hand-pointer" /> 
             </router-link>
             </b-col>
           </b-row>
@@ -55,16 +59,16 @@
                 @sliding-start="onSlideStart"
                 @sliding-end="onSlideEnd">
       <b-carousel-slide 
-        img-src="/bluebird_bouquet_01.jpg">
+        img-src="/bluebird_bouquet_05.jpg" alt="Couple holding a bouquet designed by Bluebird Flowers" >
       </b-carousel-slide>
       <b-carousel-slide 
-        img-src="/bluebird_bouquet_03.jpg">
+        img-src="/bluebird_bouquet_03.jpg" alt="Girl with glasses holding a bouquet">
       </b-carousel-slide>
       <b-carousel-slide 
-        img-src="/bluebird_bouquet_06.jpg">
+        img-src="/bluebird_bouquet_03.jpg" alt="Upclose photo of a bouquet">
       </b-carousel-slide>
       <b-carousel-slide 
-        img-src="/bluebird_bouquet_04.jpg">
+        img-src="/bluebird_bouquet_04.jpg" alt="Upclose photo of a bouquet">
       </b-carousel-slide>
     </b-carousel>
    </b-col>

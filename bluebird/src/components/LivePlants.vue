@@ -42,11 +42,14 @@
       fresh cut flowers.   
       Available offerings depend on availability.</p>
 
+      <h4 class="text-left"> Sourcing </h4>
+      <p class="text-left"> We source our live plants from growers in the area who 
+        care for and love their plants as much as we do.  This leaves us the most
+        confident that you will be able to enjoy your plant at home for many years to come.
+      </p>
+
       <h4 class="text-left"> Typical plants around the shop </h4>
-      <p class="text-left"> In order to ensure we are ready for your special day, we encourage 
-      clients to let us know their request at least 10 days in advance. 
-      This time will allow us ample time to ensure our stock is fresh 
-      and ready for your special day.</p>
+
       <b-row class="plant-list">
         <b-col cols="6">
           <p> Succulents </p>
@@ -79,18 +82,18 @@
           <p> And plenty more! </p> 
         </b-col>
         </b-row>
-        </b-col>
-      </b-row>
-
-      <b-row class="button-row fill-orange">
+                  <b-row class="button-row">
             <b-col>
             <router-link to="/request-form">
-              <a>
-                <p>Make a request </p>
-              </a>
+                Make a request 
+                <font-awesome-icon class="request-icon" icon="hand-pointer" /> 
             </router-link>
             </b-col>
           </b-row>
+        </b-col>
+
+      </b-row>
+
   </b-container>
 </template>
 

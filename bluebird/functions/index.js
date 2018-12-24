@@ -15,20 +15,22 @@ const mailTransport = nodemailer.createTransport({
 
 exports.sendEmailWhenRequestSubmit = functions.database.ref('/leads/{id}').onCreate((snapshot, context) => {
   const val = snapshot.val();
+  console.log(val);
   const mailOptions = {
     from: '" Blue Bird Flowers" ',
     to: "bluebirdflowerrs@gmail.com",
   };
   mailOptions.subject = "Bluebird Flowers Contact Form";
   mailOptions.html =
-                    "<b>message:</b> "       +   val.message   + "<br>" +
-                    "<b>phone number:</b> "  +   val.number    + "<br>" +
-                    "<b>email:</b> "         +   val.email     + "<br>" +
-                    "<b>first name:</b> "    +   val.firstName + "<br>" +
-                    "<b>last name:</b> "     +   val.lastName;
+                    "<b>first name:</b> "    +   val.first  + "<br>" +
+                    "<b>last name:</b> "     +   val.last   + "<br>" +
+                    "<b>phone number:</b> "  +   val.phone  + "<br>" +
+                    "<b>email:</b> "         +   val.email  + "<br>" +
+                    "<b>message:</b> "       +   val.message ;
+
 
   return mailTransport.sendMail(mailOptions)
-    .then(() => console.log('This is happening'))
+    .then(() => console.log('This is happening', val))
     .catch((error) => console.error('There was an error', error));
 });
 

@@ -10,8 +10,8 @@
           <p> Call Us </p> 
         </a>
       </b-col>
-      <b-col cols="1" md="2" class="findUs" v-on:click="mapsSelector">
-          <font-awesome-icon icon="store" /> 
+      <b-col cols="1" md="2" class="find-us" v-on:click="mapsSelector">
+          <font-awesome-icon class="find-us__icon" icon="store" /> 
           <p>Find Us </p>
       </b-col>
       <b-col cols="1" md="2">
@@ -68,6 +68,13 @@
 </script>
 
 <style scoped>
+a:hover,
+a p:hover,
+.find-us:hover .find-us__icon,
+.find-us:hover p {
+  color: #E0A591;
+  text-decoration:underline;
+}
 
 .bluebird-nav-wrapper {
   width: 100%;
@@ -83,17 +90,22 @@
 .bluebird-nav {
   background-color: #205473;
   height: 100px;
-
-  max-width: 1366px;
+  max-width: 1200px;
   margin: auto;
   padding-left: 32px;
   padding-right: 32px;
 }
 
-.bluebird-nav p {
+.bluebird-nav p,
+.find-us p,
+.find-us__icon {
   display: inline;
 }
-.bluebird-nav a, .bluebird-nav p, .findUs {
+.bluebird-nav a, 
+.bluebird-nav p, 
+.find-us,
+.find-us p,
+.find-us__icon {
   color: white;
   font-family: 'bebas-neue', sans-serif;
   font-size: 1.8vmax;
@@ -116,15 +128,8 @@
   }
    .bluebird-nav p {
      font-size: 2vmax;
-   }
-    .bluebird-nav p {
     display: none !important;
   }
-
-
- .bluebird-nav a, .findUs{
-   line-height: 80px;
- }
 }
 
 @media only screen and (max-width: 720px) {

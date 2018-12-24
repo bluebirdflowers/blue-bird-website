@@ -5,8 +5,7 @@
                 img-top>         
       </img>
 
-
-    <b-row  align-v="center">
+    <b-row align-v="center">
       <b-col lg="6" sm="12">
           <b-row no-gutters>
             <h2 class="text-left"> Flower CSA </h2>
@@ -86,9 +85,8 @@
           <b-row class="button-row">
             <b-col>
             <router-link to="/request-form">
-              <a>
-                <p>Make a request </p>
-              </a>
+                Make a request 
+                <font-awesome-icon class="request-icon" icon="hand-pointer" /> 
             </router-link>
             </b-col>
           </b-row>
@@ -166,7 +164,6 @@
   margin-top: 16px;
   display: none;
 }
-
 
 .image-wrapper {
   width: 48%;
