@@ -1,35 +1,34 @@
 <template>
   <b-container id="events"  class="container">
-        <img src="/blue_bird_long_22.jpg"
+        <img :src="imageLong"
               img-alt="Card image"
               img-top>         
     </img>
-
     <b-row align-v="center" class="row">
       <b-col sm="12" lg="6">
         <b-carousel id="events-carousel"
-                style="text-shadow: 1px 1px 2px #333;"
-                controls
-                indicators
-                background="#ababab"
-                :interval="0"
-                img-width="1024"
-                img-height="480"
-                v-model="slide"
-                @sliding-start="onSlideStart"
-                @sliding-end="onSlideEnd"
+          style="text-shadow: 1px 1px 2px #333;"
+          controls
+          indicators
+          background="#ababab"
+          :interval="0"
+          img-width="1024"
+          img-height="480"
+          v-model="slide"
+          @sliding-start="onSlideStart"
+          @sliding-end="onSlideEnd"
          >
         <b-carousel-slide 
-          img-src="/bluebird_csa_01.jpg"
+          :img-src="image1"
         ></b-carousel-slide>
         <b-carousel-slide 
-          img-src="/bluebird_csa_02.jpg">
+          :img-src="image2">
         </b-carousel-slide>
         <b-carousel-slide 
-          img-src="/bluebird_csa_03.jpg">
+          :img-src="image3">
         </b-carousel-slide>
         <b-carousel-slide 
-          img-src="/bluebird_csa_05.jpg">
+          :img-src="image4">
         </b-carousel-slide>
       </b-carousel>
     </b-col>
@@ -70,20 +69,23 @@
         </router-link>
         </b-col>
       </b-row>
-
-  </b-col>
-
+    </b-col>
   </b-row>
   </b-container>
 </template>
 
 <script>
   import VLink from '../components/VLink.vue'
+  import EventImage1 from '../assets/bluebird_events_04.jpg'
+  import EventImage2 from '../assets/bluebird_events_01.jpg'
+  import EventImage3 from '../assets/bluebird_events_05.jpg'
+  import EventImage4 from '../assets/bluebird_events_02.jpg'
+  import EventLongImage from "../assets/blue_bird_long_44.jpg"
   import Vue from 'vue'
 
   export default {
     components: {
-      VLink,
+      VLink
 
     },
     props: {
@@ -104,6 +106,11 @@
       return {
         slide: 0,
         sliding:null,
+        image1: EventImage1,
+        image2: EventImage2,
+        image3: EventImage3,
+        image4: EventImage4,
+        imageLong: EventLongImage
       }
     }
   }
@@ -124,8 +131,8 @@
 }
 
 #events-carousel {
-  height: calc(100vh - 132px);
-  max-height: 600px;
+  height: 600px;
+  margin-top: 32px;
   overflow: hidden;
 }
 

@@ -44,7 +44,12 @@ module.exports = {
       {
         test: /\.(html|tpl)$/,
         loader: 'html-loader'
-      }
+      },
+      { 
+        test: /\.xml$/, 
+        loader: 'xml-loader'
+      } // will load all .xml files with xml-loader by default
+
     ]
   },
   resolve: {

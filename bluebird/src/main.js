@@ -54,7 +54,6 @@ library.add(faHandPointer)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 
-
 new Vue({
   el: '#app',
   router,

@@ -44,7 +44,6 @@
             </b-col>
           </b-row>
       </b-col>
-      
 
       <b-col align-self="center" sm="12" lg="6">
         <b-carousel id="bouquets-carousel"
@@ -59,16 +58,20 @@
                 @sliding-start="onSlideStart"
                 @sliding-end="onSlideEnd">
       <b-carousel-slide 
-        img-src="/bluebird_bouquet_05.jpg" alt="Couple holding a bouquet designed by Bluebird Flowers" >
+        :img-src="image1" 
+        alt="Couple holding a bouquet designed by Bluebird Flowers" >
       </b-carousel-slide>
       <b-carousel-slide 
-        img-src="/bluebird_bouquet_03.jpg" alt="Girl with glasses holding a bouquet">
+        :img-src="image2" 
+        alt="Girl with glasses holding a bouquet">
       </b-carousel-slide>
       <b-carousel-slide 
-        img-src="/bluebird_bouquet_03.jpg" alt="Upclose photo of a bouquet">
+        :img-src="image3" 
+        alt="Upclose photo of a bouquet">
       </b-carousel-slide>
       <b-carousel-slide 
-        img-src="/bluebird_bouquet_04.jpg" alt="Upclose photo of a bouquet">
+        :img-src="image4" 
+        alt="Upclose photo of a bouquet">
       </b-carousel-slide>
     </b-carousel>
    </b-col>
@@ -81,10 +84,15 @@
   import Vue from 'vue'
   import routes from '../routes'
 
+  import BouquetImage1 from '../assets/bluebird_bouquet_01.jpg'
+  import BouquetImage2 from '../assets/bluebird_bouquet_02.jpg'
+  import BouquetImage3 from '../assets/bluebird_bouquet_03.jpg'
+  import BouquetImage4 from '../assets/bluebird_bouquet_04.jpg'
+  import BouquetLongImage from '../assets/blue_bird_long_33.jpg'
+
   export default {
     components: {
       VLink,
-
     },
     props: {
 
@@ -93,11 +101,24 @@
 
     },
     methods: { 
+      onSlideStart(slide) {
+        this.sliding = true;
+      },
+      onSlideEnd(slide) {
+        this.sliding = false;
+      }
     },
     data: function() {
       return {
         images: '',
-        currentNumber: ''
+        slide: 0,
+        sliding: null,
+        currentNumber: '',
+        image1: BouquetImage1,
+        image2: BouquetImage2,
+        image3: BouquetImage3,
+        image4: BouquetImage4,
+        imageLong: BouquetLongImage
       }
     }
   }
@@ -125,8 +146,8 @@
 }
 
 #bouquets-carousel {
-  height: calc(100vh - 132px);
-  max-height: 600px;
+  height: 600px;
+  margin-top: 32px;
   overflow: hidden;
 }
 

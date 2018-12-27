@@ -6,9 +6,27 @@ import TermsOfUse from './components/TermsOfUse.vue'
 
 
 export default [
-  { path: '/', component:  Home },
-  { path: '/request-form', component: RequestForm },
-  { path: '/terms-of-use', component: TermsOfUse },
-  { path: '/privacy-policy', component: PrivacyPolicy },
-  { path: '/*', redirect: '/'}
+  { 
+    path: '/', 
+    component:  Home,
+    name: 'Home'
+  },
+  { 
+    path: '/request-form', 
+    component: RequestForm,
+    name: 'RequestForm'
+  },
+  { 
+    path: '/terms-of-use', 
+    component: TermsOfUse,
+    name: 'TermsOfUse'
+  },
+  { 
+    path: '/privacy-policy', 
+    component: PrivacyPolicy,
+    name: 'PrivacyPolicy'
+  },
+  { 
+    path: '/*', redirect: '/'
+  }
 ]

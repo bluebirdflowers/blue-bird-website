@@ -35,8 +35,8 @@
       constitutes acceptance of those changes.
     </p>
     <p>
-      Our store is hosted on Shopify Inc. They provide us with the online e-commerce platform that 
-      allows us to sell our products and services to you.
+      Our store is hosted on Google Firebase. They provide us with the online hosting platform that 
+      allows us to serve our website and send emails via our contact form.
     </p>
     <h3>
       SECTION 1 - ONLINE STORE TERMS

@@ -6,19 +6,19 @@
             <li>
               <a  href="https://www.facebook.com/pages/Blue-Bird-Flowers/256188174927013?__tn__=%2CdkC-R-R&eid=ARBbBDb5Ps5hNiAhtIcOCVD8WSgXX8DOqw5e6dBu0lpkzi4-bb32dHbQCwo4KMPuOSnaxldwz0e1B8mn&hc_ref=ARQyFiGstLOnoHIMvFA5nIP-u0EPfZIjvZ-HIj1isKzb1JdnePZpPDwhbgg_75mElyg&fref=tag"> 
                 <font-awesome-icon :icon="['fab', 'facebook']" /> 
-                <p>Facebook </p>
+                <p style="padding-left: 8px;">Facebook </p>
               </a>
             </li>
             <li>
               <a  href="https://www.instagram.com/flowersbluebird/">
                 <font-awesome-icon :icon="['fab', 'instagram']" /> 
-                <p class="ml-8"> Instagram </p> 
+                <p style="padding-left: 8px;" class="ml-8"> Instagram </p> 
               </a>
             </li>
             <li>
               <a  href="mailto:bluebirdflowersllc@gmail.com"> 
                 <font-awesome-icon icon="envelope" /> 
-                <p> Email </p>
+                <p style="padding-left: 8px;"> Email </p>
               </a>
             </li>
             </ul>
@@ -26,8 +26,8 @@
         <b-col class="text-center" cols="12" md="4">
           <b-row class="bluebird-footer__row">
             <address>
-            <p> Open daily 2-9pm 
-            <br>
+            <h3 style="color: white;"> Open Mon - Sat 2pm - 9pm </h3>
+            <p>
              1203 Willamette Street 
             <br>
              Eugene Oregon 97401 </p>
@@ -49,7 +49,7 @@
               </router-link>
             </li>
             <li>
-                <p> Copyright Bluebird Flowers 2018 </p>
+                <p> Copyright Blue Bird Flowers 2018 </p>
             </li>
             </ul>
         </b-col>
@@ -78,7 +78,7 @@ address {
 
 
 .bluebird-footer ul {
-  margin: auto;
+  margin: 32px auto;
 }
 .bluebird-footer ul li {
   display:block;
@@ -87,6 +87,12 @@ address {
   margin: auto !important;
   color: white;
 }
+.bluebird-footer ul li:hover,
+.bluebird-footer ul li a:hover,
+.bluebird-footer ul li a:hover p  {
+  color: #E0A591 !important
+}
+
 
 .bluebird-footer p {
   display:block;

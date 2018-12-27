@@ -1,7 +1,7 @@
 <template>
 
   <b-container id="live-plants" class="container">
-    <img src="/blue_bird_long_44.jpg"
+    <img :src="longImage"
               img-alt="Card image"
               img-top>         
     </img>
@@ -21,16 +21,16 @@
                 @sliding-end="onSlideEnd"
          >
         <b-carousel-slide 
-          img-src="/bluebird_live_plants_01.jpg"
+          :img-src="image1"
         ></b-carousel-slide>
         <b-carousel-slide 
-          img-src="/bluebird_live_plants_02.jpg">
+          :img-src="image2">
         </b-carousel-slide>
         <b-carousel-slide 
-          img-src="/bluebird_live_plants_03.jpg">
+          :img-src="image3">
         </b-carousel-slide>
         <b-carousel-slide 
-          img-src="/bluebird_live_plants_04.jpg">
+          :img-src="image4">
         </b-carousel-slide>
       </b-carousel>
     </b-col>
@@ -99,6 +99,11 @@
 
 <script>
   import VLink from '../components/VLink.vue'
+  import LivePlants1 from '../assets/bluebird_live_plants_01.jpg'
+  import LivePlants2 from '../assets/bluebird_live_plants_02.jpg'
+  import LivePlants3 from '../assets/bluebird_live_plants_03.jpg'
+  import LivePlants4 from '../assets/bluebird_live_plants_04.jpg'
+  import LivePlantsLong from '../assets/blue_bird_long_11.jpg'
   import Vue from 'vue'
 
   export default {
@@ -113,11 +118,24 @@
 
     },
     methods: { 
+      onSlideStart(slide) {
+        this.sliding = true;
+      },
+      onSlideEnd(slide) {
+        this.sliding = false;
+      }
     },
     data: function() {
       return {
         images: '',
-        currentNumber: ''
+        currentNumber: '',
+        slide: 0,
+        sliding: null,
+        image1: LivePlants1,
+        image2: LivePlants2,
+        image3: LivePlants3,
+        image4: LivePlants4,
+        longImage: LivePlantsLong
       }
     }
   }
@@ -149,12 +167,11 @@ font-style: italic !important;
 }
 
 #plants-carousel {
-  height: calc(100vh - 132px);
-  max-height: 600px;
+  height: 600px;
+  margin-top: 32px;
   overflow: hidden;
 }
 .image-slider {
-  background-image: url("../assets/bluebird_live_plants_01.jpg");
   background-size: cover;
 }
 

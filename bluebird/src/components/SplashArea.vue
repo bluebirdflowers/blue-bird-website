@@ -4,7 +4,7 @@
     <b-container class="splash-section__container">
       <b-row align-v="center" class="outline text-center justify-content-center">
         <b-col cols="12">
-          <h1 > Bluebird </h1>
+          <h1 > Blue Bird </h1>
         </b-col>
         <b-col cols="12">
           <h3 class="text-center"> ~flowers~ </h3>

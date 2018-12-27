@@ -2,7 +2,7 @@
   <b-container class="bluebird-nav-wrapper">
     <b-row class="bluebird-nav" sticky="true">
       <b-col class="text-left" cols="8" md="6">
-        <a class="title-link" href="/"> Bluebird Flowers</a>
+        <a class="title-link" href="/"> Blue Bird Flowers</a>
       </b-col>
       <b-col cols="1" md="2">
         <a href="tel:1-541-780-5510"> 
