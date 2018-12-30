@@ -80,6 +80,12 @@ a {
 }
 
 @media (max-width: 991px) {
+#events,
+#flowers, 
+#live-plants, 
+#bouquets {
+  padding: 16px;
 
+}
 }
 </style>

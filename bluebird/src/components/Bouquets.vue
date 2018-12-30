@@ -33,7 +33,7 @@
           and product to fill your request.</p>
         <h4> DELIVERY </h4>
         <p> We offer free delivery to our downtown neighbors.  
-        5$ delivery charge within 10 miles of our shop.</p>
+        $5 delivery charge within 10 miles of our shop.</p>
         </b-row>
           <b-row class="button-row">
             <b-col>

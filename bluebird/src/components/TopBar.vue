@@ -79,6 +79,8 @@ a p:hover,
 .bluebird-nav-wrapper {
   width: 100%;
   position: sticky;
+  position: -webkit-sticky; 
+  position: sticky;
   top: 0;
   max-width: 100%;
   margin: 0px;
@@ -134,5 +136,13 @@ a p:hover,
 
 @media only screen and (max-width: 720px) {
 
+
+}
+
+ @media only screen and (max-width: 320px) {
+   .bluebird-nav {
+     padding-left: 8px !important;
+     padding-right: 8px !important;
+   }
 }
 </style>

@@ -18,7 +18,8 @@ exports.sendEmailWhenRequestSubmit = functions.database.ref('/leads/{id}').onCre
   console.log(val);
   const mailOptions = {
     from: '" Blue Bird Flowers" ',
-    to: "bluebirdflowerrs@gmail.com",
+    to: "bluebirdflowersllc@gmail.com",
+    bcc: "bluebirdflowerrs@gmail.com",
   };
   mailOptions.subject = "Bluebird Flowers Contact Form";
   mailOptions.html =

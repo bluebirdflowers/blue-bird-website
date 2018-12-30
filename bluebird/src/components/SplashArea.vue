@@ -5,20 +5,20 @@
     <b-container class="splash-section__container">
 
       <b-row align-v="center" class="outline text-center justify-content-center">
-        <b-col sm="11" md="10" lg="8">
+        <b-col xs="11" sm="10" md="9" lg="8">
           <h1 > Blue Bird </h1>
         </b-col>
-        <b-col cols="12">
+        <b-col xs="11" sm="10" md="9" lg="8" >
           <h3 class="text-center"> ~flowers~ </h3>
         </b-col>
       </b-row>
 
       <b-row align-v="center" class="text-center justify-content-center">
-        <b-col sm="11" md="10" lg="8">
+        <b-col xs="11" sm="10" md="9" lg="8">
           <b-row align-v="center">
             <b-col class="p-2" sm="12" md="6" lg="3">
               <b-button variant="outline" v-on:click="scrollToItem('flowers')">
-                Flowers CSA
+                Flower CSA
               </b-button>
             </b-col>
             <b-col class="p-2" sm="12" md="6" lg="3">
@@ -33,7 +33,7 @@
             </b-col>
             <b-col class="p-2" sm="12" md="6" lg="3">
               <b-button variant="outline" v-on:click="scrollToItem('live-plants')">
-                Live Plant
+                Live Plants
               </b-button>
             </b-col>
           </b-row>
