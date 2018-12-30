@@ -184,8 +184,7 @@
 }
 
 #csa-carousel {
-  height: 600px;
-  margin-top: 32px;
+  height: 560px;
   overflow: hidden;
 }
 .image-buttons {

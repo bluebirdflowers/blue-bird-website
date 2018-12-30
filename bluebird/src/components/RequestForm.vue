@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="request-container">
+    <div id="request-container">
       <h2 :class="contactFormClass"> Get in touch! </h2>
 
       <b-container :class="contactFormClass">
@@ -99,19 +99,9 @@ export default {
     FooterNav,
     RequestForm   
   },
-  /* mounted: function() {
-      login:  {
-        console.log("this", this);
-        firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
-          function(user) {
-            alert("Well done, bravo!", JSON.stringify(user))
-          },
-          function(err) {
-            alert('ooops', + err)
-          }
-        )
-      }
-  },*/
+   mounted: function() {
+      scrollTo(top);
+  },
   methods: {
     onSubmit (evt) {
       evt.preventDefault();
@@ -204,7 +194,7 @@ label {
   text-align: left !important;
 }
 
-placeholder {
+#request-container placeholder {
   color: rgba(211,211,211, .5);
 }
 ul {
@@ -224,10 +214,9 @@ a {
 p {
   font-size: 16px;
   font-family: 'Roboto Slab', serif;
-  color: rgba(211,211,211, .5);
 }
 
-.request-container {
+#request-container {
   min-height: calc( 100vh - 100px );
 }
 

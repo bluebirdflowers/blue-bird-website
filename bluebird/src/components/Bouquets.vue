@@ -18,22 +18,22 @@
           start the conversation.
         </p>
         <h4> PRICE RANGE</h4>
-        <p> A mix of what is available, common, tropical, edible, 
-        and exotic all blended in a beautiful bouquet wrapped in 
-        recycled paper. </p>
+        <p> A mix of what is available, including common flowers, tropicals,
+          edible botanicals, and exotics all blended in a beautiful craft-paper
+          wrapped bouquet. </p>
         <b-col>
           <h4 class="text-right"> $15 &amp; UP / each </h4>
         </b-col>
         </b-row>
         <b-row no-gutters>
         <h4> TIME CONSTRAINTS</h4>
-        <p> We are happy to put together something day of, if we have avaialble stock. 
+        <p> We are happy to put together something day of, if we have stock. 
           <a style="font-weight: bold;" href="tel:5417805510">Give us a call </a> or <router-link style="font-weight: bold;" 
           to="/request-form"> complete a request form</router-link> before noon to make sure we have enough time
           and product to fill your request.</p>
         <h4> DELIVERY </h4>
         <p> We offer free delivery to our downtown neighbors.  
-        5$ delivery charge for within 10 miles of our shop.</p>
+        5$ delivery charge within 10 miles of our shop.</p>
         </b-row>
           <b-row class="button-row">
             <b-col>
@@ -146,8 +146,7 @@
 }
 
 #bouquets-carousel {
-  height: 600px;
-  margin-top: 32px;
+  height: 560px;
   overflow: hidden;
 }
 

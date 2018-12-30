@@ -44,8 +44,8 @@
 
       <h4 class="text-left"> Sourcing </h4>
       <p class="text-left"> We source our live plants from growers in the area who 
-        care for and love their plants as much as we do.  This leaves us the most
-        confident that you will be able to enjoy your plant at home for many years to come.
+        care for and love their plants just as much as we do.  This leaves us
+        confident that you will enjoy your plant at home for many years to come.
       </p>
 
       <h4 class="text-left"> Typical plants around the shop </h4>
@@ -144,7 +144,8 @@
 <style scoped>
 
 .plant-list p {
-  font-size: calc(.75vw + .75vh + .5vmin);
+  font-size: 16px;
+  line-height: 32px;
   font-weight: 400;
 }
 
@@ -167,8 +168,7 @@ font-style: italic !important;
 }
 
 #plants-carousel {
-  height: 600px;
-  margin-top: 32px;
+  height: 560px;
   overflow: hidden;
 }
 .image-slider {

@@ -46,7 +46,7 @@
       </h4>
       <p class="text-left"> 
         In order to ensure we are ready for your special day, 
-        we encourage clients to <router-link style="font-weight: bold;" to="/request-form"> get in touch </router-link> atleast ten days before the event. 
+        we encourage clients to <router-link style="font-weight: bold;" to="/request-form"> get in touch </router-link> at least ten days before the event. 
         This will ensure our stock is fresh and ready with enough time to 
         prepare for your celebration.
       </p>
@@ -56,9 +56,8 @@
       </h4>
 
       <p class="text-left">
-      Price range varies depending on your special preferences, the time of year, and 
-      the mix of product utilized.  We work with all budgets and are ready to help you 
-      bring life your special moments and celebrations.
+      Price varies based on your requirements, the time of year, and 
+      the mix of product utilized.  We work with all budgets.
       </p> 
       </b-row>
         <b-row class="button-row">
@@ -131,8 +130,7 @@
 }
 
 #events-carousel {
-  height: 600px;
-  margin-top: 32px;
+  height: 560px;
   overflow: hidden;
 }
 

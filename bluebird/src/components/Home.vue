@@ -66,9 +66,11 @@ a {
 #live-plants, 
 #bouquets {
   width: 100%;
-  min-height: calc(100vh - 132px) ;
+  min-height: 680px ;
   margin-top: 32px;
-  margin-bottom: 32px;
+  margin: 32px auto;
+  padding: 32px;
+
 }
 
 .container {
