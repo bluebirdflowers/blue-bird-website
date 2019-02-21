@@ -26,7 +26,7 @@
         <b-col class="text-center" cols="12" md="4">
           <b-row class="bluebird-footer__row">
             <address>
-            <h3 style="color: white;"> Open Mon - Sat 2pm - 9pm </h3>
+            <h3 style="color: white;"> Open Mon - Sat 10am - 6pm </h3>
             <p>
              1203 Willamette Street 
             <br>
